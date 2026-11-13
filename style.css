@@ -78,3 +78,22 @@ footer {
 }
 
 ::selection { background: var(--link); color: var(--paper); }
+
+/* ---------- page layout with dragon at the bottom ---------- */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main { width: 100%; }
+
+.dragon {
+  margin-top: auto;
+  align-self: center;
+  width: min(420px, 90vw);
+  aspect-ratio: 400 / 260;
+  margin-bottom: 2rem;
+  background: var(--ink);
+  -webkit-mask: url(dragon.svg) center / contain no-repeat;
+  mask: url(dragon.svg) center / contain no-repeat;
+}
